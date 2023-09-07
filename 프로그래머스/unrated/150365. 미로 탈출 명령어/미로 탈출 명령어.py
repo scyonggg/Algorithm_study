@@ -8,9 +8,6 @@ def solution(n, m, x, y, r, c, k):
     
     def dfs(cx, cy, move, way):
         nonlocal flag, answer, direction
-        if flag == True:
-            return
-                
         if flag == False and cx == r and cy == c and move == k:
             answer = way
             flag = True
@@ -25,8 +22,6 @@ def solution(n, m, x, y, r, c, k):
         for idx, (dx, dy) in enumerate(((1, 0), (0, -1), (0, 1), (-1, 0))):
             if flag == True:
                 return
-            
-            
             nx = cx + dx
             ny = cy + dy
             if nx < 1 or nx > n or ny < 1 or ny > m:
